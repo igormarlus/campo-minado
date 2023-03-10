@@ -66,39 +66,4 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-<script>
-    $(document).ready(function(){
-        //alert("S");
-        var mina = 0;
-        var total = 40;
-        var sort = Math.floor(Math.random() * total - 1 );
-        if(sort == 1){sort++;}
-        //alert(sort);
-
-        for(var n=1;n<total;n++){
-
-            if(n == sort){
-                 mina = 1;
-            }else{
-                mina = 0;
-            }    
-
-            //$("#qds").append("<div class='col-lg qd' id=qd"+n+" data-mina="+mina+" data-n="+n+">"+n+"</div>")
-            // <i class="far fa-envelope"></i>
-            $("#qds").append("<div class='col-sm qd' id=qd"+n+" data-mina="+mina+" data-n="+n+"><i class='far fa-envelope'></i></div>")
-        }
-
-        $(".qd").click(function(){
-                var sel = $(this).attr('data-n');
-                var mina = $(this).attr('data-mina');
-                if(mina == 1){
-                    $("#qd"+sel).html("").append("<img src='imagens/bomba.png' style='max-width:60px'>");
-                }else{
-                    $("#qd"+sel).html("").append("<i class='fas fa-heart'></i>");
-                    //$("#qd"+sel).append("<i class='fas fa-heart'></i>");
-                }
-                //alert(sel+" - "+mina);
-        })
-    })
-</script>
+<script language="javascript" src="js/jogo.js"></script>
